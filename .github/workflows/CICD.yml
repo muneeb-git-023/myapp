@@ -21,5 +21,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myreactapp:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/myreactapp:latest
+         echo "Building Docker image..."
+         docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myreactapp:latest .
+         echo "Pushing Docker image..."
+         docker push ${{ secrets.DOCKERHUB_USERNAME }}/myreactapp:latest
+
